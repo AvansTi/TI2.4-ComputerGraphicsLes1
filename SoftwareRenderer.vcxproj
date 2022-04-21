@@ -139,14 +139,26 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Matrix.cpp" />
+    <ClCompile Include="ObjModel.cpp" />
     <ClCompile Include="SoftwareRenderer.cpp" />
     <ClCompile Include="Vec2.cpp" />
     <ClCompile Include="Vec3.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Matrix.h" />
+    <ClInclude Include="ObjModel.h" />
     <ClInclude Include="stb_image_write.h" />
     <ClInclude Include="Vec2.h" />
     <ClInclude Include="Vec3.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="suzanne.obj">
+      <FileType>Document</FileType>
+    </None>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
