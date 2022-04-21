@@ -2,7 +2,9 @@
 #define STB_IMAGE_WRITE_IMPLEMENTATION
 #include "stb_image_write.h"
 #include <iostream>
+#ifdef _WIN32
 #include <Windows.h>
+#endif
 #include "Vec2.h"
 #include "Vec3.h"
 
@@ -40,6 +42,7 @@ int main()
 
 
     stbi_write_png("out.png", width, height, 3, image, width * 3);
+#ifdef _WIN32
     ShellExecute(0, 0, L"out.png", 0, 0, SW_SHOW);
-
+#endif
 }
